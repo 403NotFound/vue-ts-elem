@@ -1,5 +1,5 @@
 <template>
-  <div>Header</div>
+  <div class="header">Header</div>
 </template>
 
 <script>
@@ -10,4 +10,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.header
+  width 1rem
+  height 1rem
+  background red
 </style>
