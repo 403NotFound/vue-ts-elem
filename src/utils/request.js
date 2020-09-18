@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = '/api'
+const BASE_URL = ' https://www.easy-mock.com/mock/5f6472bffdeff7084f396955/api'
 
 const $http = axios.create({
   baseURL: BASE_URL,

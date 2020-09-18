@@ -1,9 +1,9 @@
 import $http from '@/utils/request'
 
 // test
-export const test = (page) => {
+export const login = (page) => {
   return $http({
-    url: '/test',
+    url: '/login',
     method: 'get'
   })
 }

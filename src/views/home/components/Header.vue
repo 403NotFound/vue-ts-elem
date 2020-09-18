@@ -3,10 +3,13 @@
 </template>
 
 <script>
-import { test } from '@/api/api'
+import { login } from '@/api/api'
 export default {
   name: 'HomeHeader',
-  mounted () {}
+  async mounted () {
+    let res = await login()
+    console.log(res);
+  }
 }
 </script>
 
