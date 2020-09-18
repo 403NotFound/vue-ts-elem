@@ -3,9 +3,10 @@
 </template>
 
 <script>
-
+import { test } from '@/api/api'
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  mounted () {}
 }
 </script>
 

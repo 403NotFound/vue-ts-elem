@@ -8,6 +8,7 @@ import '@/assets/styles/border.css';
 import '@/assets/styles/reset.css';
 // import 'amfe-flexible';
 import '@/utils/rem'
+import './utils/request'
 
 Vue.config.productionTip = false;
 
