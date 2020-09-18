@@ -7,6 +7,7 @@ import fastClick from 'fastclick';
 import '@/assets/styles/border.css';
 import '@/assets/styles/reset.css';
 // import 'amfe-flexible';
+import '@/utils/rem'
 
 Vue.config.productionTip = false;
 

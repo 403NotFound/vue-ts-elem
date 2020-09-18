@@ -13,5 +13,6 @@ export default {
 .header
   width 1rem
   height 1rem
+  font-size .14rem
   background red
 </style>
