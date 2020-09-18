@@ -9,6 +9,9 @@ import '@/assets/styles/reset.css';
 // import 'amfe-flexible';
 import '@/utils/rem'
 import './utils/request'
+// vant
+import './plugins/index.ts'
+// import 'vant/lib/index.css'
 
 Vue.config.productionTip = false;
 
