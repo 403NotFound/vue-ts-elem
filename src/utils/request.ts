@@ -10,7 +10,7 @@ const $http = axios.create({
 // 添加请求拦截器
 $http.interceptors.request.use(function (config) {
   return config
-}, function (error) {
+}, function (error): void {
   // 对请求错误做些什么
 })
 

@@ -1,5 +1,7 @@
 const path = require('path')
 
+const merge = require('webpack-merge');
+const tsImportPluginFactory = require('ts-import-plugin');
 module.exports = {
   // 部署应用包时的 baseURL,用法和 webpack 本身的 output.publicPath 一致
   publicPath: './',
@@ -19,6 +21,27 @@ module.exports = {
     config.resolve.alias
       .set('vue$', 'vue/dist/vue.esm.js')
       .set('@', path.resolve(__dirname, './src'))
+    config.module
+    .rule('ts')
+    .use('ts-loader')
+    .tap(options => {
+      options = merge(options, {
+        transpileOnly: true,
+        getCustomTransformers: () => ({
+          before: [
+            tsImportPluginFactory({
+              libraryName: 'vant',
+              libraryDirectory: 'es',
+              style: true
+            })
+          ]
+        }),
+        compilerOptions: {
+          module: 'es2015'
+        }
+      });
+      return options;
+    });
   },
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
@@ -32,13 +55,13 @@ module.exports = {
   // css相关配置
   css: {
     // 是否分离css（插件ExtractTextPlugin）
-    extract: true,
+    // extract: true,
     // 是否开启 CSS source maps
     sourceMap: false,
     // css预设器配置项
     loaderOptions: {},
     // 是否启用 CSS modules for all css / pre-processor files.
-    requireModuleExtension: false
+    requireModuleExtension: true
   },
   // 是否使用 thread-loader
   parallel: require('os').cpus().length > 1,

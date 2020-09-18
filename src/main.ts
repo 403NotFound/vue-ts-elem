@@ -1,24 +1,24 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
 // 解决移动端触控 300ms 问题
-import fastClick from 'fastclick';
-import '@/assets/styles/border.css';
-import '@/assets/styles/reset.css';
-// import 'amfe-flexible';
+import fastClick from 'fastclick'
+import '@/assets/styles/border.css'
+import '@/assets/styles/reset.css'
+// import 'amfe-flexible'
 import '@/utils/rem'
 import './utils/request'
 // vant
 import './plugins/index.ts'
 // import 'vant/lib/index.css'
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
-fastClick.attach(document.body);
+fastClick.attach(document.body)
 
 new Vue({
   router,
   store,
   render: (h) => h(App),
-}).$mount('#app');
+}).$mount('#app')
