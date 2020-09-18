@@ -30,3 +30,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 9/18 22:45
 update code
+
+### 9/18 22:55
+updata code again
