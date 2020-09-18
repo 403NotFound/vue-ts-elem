@@ -9,5 +9,5 @@ describe('HelloWorld.vue', () => {
     // });
     // expect(wrapper.text()).toMatch(msg);
     expect(10).toBe(10)
-  });
-});
+  })
+})
