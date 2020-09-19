@@ -25,5 +25,6 @@ npm run test:unit
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 项目相关文档
+[文档地址](https://www.showdoc.com.cn/1057130467076772?page_id=5434047423101244).
+
