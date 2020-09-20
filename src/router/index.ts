@@ -40,4 +40,19 @@ const router = new VueRouter({
   routes,
 });
 
+// // 用于获取 Token
+// const getToken = () => {
+//   return window.localStorage.getItem('token')
+// }
+
+// // 路由守卫
+// router.beforeEach(to, from, next) {
+//   if (to.path === '/login') return next()
+
+//   // 获取登录令牌 Token
+//   const token = getToken()
+//   if (!token) return next('/login')
+//   next()
+// }
+
 export default router;
