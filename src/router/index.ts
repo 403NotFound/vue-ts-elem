@@ -5,9 +5,32 @@ Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
   {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/login/Login.vue')
+  },
+  {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/home/Home.vue'),
+    redirect: '/home',
+    component: () => import('@/components/Home.vue'),
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: () => import('@/views/home/Home.vue')
+      },
+      {
+        path: '/order',
+        name: 'Order',
+        component: () => import('@/views/order/Order.vue')
+      },
+      {
+        path: '/mine',
+        name: 'Mine',
+        component: () => import('@/views/mine/Mine.vue')
+      }
+    ]
   },
 ];
 
