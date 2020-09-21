@@ -46,14 +46,16 @@ export default {
       username: '',
       password: '',
       hasIcon: false,
-      isLoding: false
+      isLoding: false,
+      flag: true
     }
   },
   methods: {
     async onSubmit() {
+      this.flag = false
       this.isLoding = true
       const user = {
-        username: this.username, 
+        username: this.username,
         password: this.password
       }
       const res = await login(user)
@@ -66,7 +68,7 @@ export default {
         this.$router.push('/mine')
       }
     },
-    handleSaveTooken (token) {
+    handleSaveTooken(token) {
       window.localStorage.setItem('token', token)
     }
   }
