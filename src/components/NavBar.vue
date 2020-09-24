@@ -2,8 +2,11 @@
   <div>
     <van-nav-bar 
       :title="title" 
+      :right="right"
       left-arrow
+      :right-text="right"
       @click-left="handleLeftClick"
+      @click-right="handleRightClick"
     >
       <template #right v-if="hasIcon">
         <van-icon name="search" size="18" />
@@ -22,6 +25,9 @@ export default {
     },
     hasIcon: {
       type: Boolean
+    },
+    right: {
+      type: String
     }
   },
   data() {
@@ -30,6 +36,9 @@ export default {
   methods: {
     handleLeftClick() {
       this.$router.go(-1)
+    },
+    handleRightClick() {
+      this.$emit('clickRight')
     }
   }
 }
