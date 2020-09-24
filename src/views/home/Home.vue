@@ -1,16 +1,6 @@
 <template>
   <div>
     <input type="text" v-model="keyword">
-    <baidu-map class="baidu-map">
-      <!-- <bm-view class="map"></bm-view> -->
-      <bm-local-search 
-        class="map-list" 
-        :keyword="keyword" 
-        :auto-viewport="true" 
-        :location="location"
-        @searchcomplete="handleSearchComplete"
-      ></bm-local-search>
-    </baidu-map>
   </div>
 </template>
 
