@@ -11,7 +11,13 @@ import '@/utils/rem'
 import './utils/request'
 // vant
 import './plugins/index.ts'
-// import 'vant/lib/index.css'
+// baidu map
+import BaiduMap from 'vue-baidu-map'
+import { AK } from './utils/config'
+
+Vue.use(BaiduMap, {
+  ak: AK
+})
 
 Vue.config.productionTip = false
 

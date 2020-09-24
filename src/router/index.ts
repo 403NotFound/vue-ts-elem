@@ -32,6 +32,11 @@ const routes: RouteConfig[] = [
       }
     ]
   },
+  {
+    path: '/selectAddress',
+    name: 'SeleclAddress',
+    component: () => import('@/views/select-address/SelectAddress.vue')
+  }
 ];
 
 const router = new VueRouter({
