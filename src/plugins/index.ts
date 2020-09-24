@@ -8,7 +8,11 @@ import {
   Field,
   NavBar,
   Icon,
-  Image
+  Image,
+  Search,
+  List,
+  Cell,
+  CellGroup
 } from 'vant';
 
 Vue.use(Button);
@@ -19,3 +23,7 @@ Vue.use(Field);
 Vue.use(NavBar);
 Vue.use(Icon);
 Vue.use(Image);
+Vue.use(Search);
+Vue.use(List);
+Vue.use(Cell);
+Vue.use(CellGroup);

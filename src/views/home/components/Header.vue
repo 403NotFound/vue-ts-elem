@@ -1,7 +1,6 @@
 <template>
   <div class="header">
-    <van-button type="primary" class="btn">主要按钮</van-button>
-    <div class="test">test</div>
+    
   </div>
 </template>
 
