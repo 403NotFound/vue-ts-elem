@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="keyword">
+    <home-header />
   </div>
 </template>
 
@@ -11,8 +11,6 @@ export default {
   name: 'Home',
   data() {
     return {
-      keyword: '杭州',
-      location: '杭州'
     }
   },
   components: {

@@ -1,19 +1,17 @@
 <template>
   <div class="header">
-    
+    <van-button type="primary" to="/selectAddress">selectAddress</van-button>
   </div>
 </template>
 
 <script>
-import { login, list } from '@/api/api.ts'
+// import { login, list } from '@/api/api.ts'
 export default {
   name: 'HomeHeader',
   data() {
     return {}
   },
   async mounted() {
-    const res = await login()
-    const res2 = await list()
   }
 }
 </script>
