@@ -15,6 +15,8 @@ import './plugins/index.ts'
 import BaiduMap from 'vue-baidu-map'
 import { AK } from './utils/config'
 
+import { RouteParams } from '@/utils/interface'
+
 Vue.use(BaiduMap, {
   ak: AK
 })
@@ -22,6 +24,16 @@ Vue.use(BaiduMap, {
 Vue.config.productionTip = false
 
 fastClick.attach(document.body)
+
+// 路由 push 方法
+Vue.prototype.push = (route: string, params: RouteParams) => {
+  router.push(route)
+}
+
+// 路由 replace 方法
+Vue.prototype.replace = (route: string, params: RouteParams) => {
+  router.replace(route)
+}
 
 new Vue({
   router,
