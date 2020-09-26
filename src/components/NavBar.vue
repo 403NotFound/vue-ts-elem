@@ -4,6 +4,7 @@
       :title="title" 
       :right="right"
       left-arrow
+      :border="false"
       :right-text="right"
       @click-left="handleLeftClick"
       @click-right="handleRightClick"

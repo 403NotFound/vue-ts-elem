@@ -12,7 +12,9 @@ import {
   Search,
   List,
   Cell,
-  CellGroup
+  CellGroup,
+  Col,
+  Row
 } from 'vant';
 
 Vue.use(Button);
@@ -27,3 +29,5 @@ Vue.use(Search);
 Vue.use(List);
 Vue.use(Cell);
 Vue.use(CellGroup);
+Vue.use(Col);
+Vue.use(Row);

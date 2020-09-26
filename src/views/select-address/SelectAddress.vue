@@ -26,15 +26,15 @@
       <bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" @locationSuccess="locationSuccess" :showAddressBar="false" :autoLocation="true"></bm-geolocation>
     </baidu-map>
     <van-cell-group class="location-container">
-      <van-cell icon="location-o">{{locationName}}</van-cell>
-      <van-button type="info"  @click="handleLocation" size="small" class="re-location">重新定位</van-button>
+      <van-cell :border="false" icon="location-o" @click="handleSaveAddress(locationName)">{{locationName}}</van-cell>
+      <van-button color="#fff" icon="aim"  @click="handleLocation" size="small" class="re-location">重新定位</van-button>
     </van-cell-group>
     <van-list
       finished-text="没有更多了"
       @load="onLoad"
       class="address-list"
     >
-      <van-cell-group v-for="item in addressList" :border="false" :key="item.title" class="item-group">
+      <van-cell-group v-for="item in addressList" @click="handleSaveAddress(item.title)" :border="false" :key="item.title" class="item-group">
         <van-cell :title="item.title" :border="false" class="address-title"/>
         <van-cell :title="item.address" class="address-content"/>
       </van-cell-group>
@@ -44,6 +44,7 @@
 
 <script>
 import NavBar from '@/components/NavBar'
+import { mapActions } from 'vuex'
 export default {
   name: 'Home',
   data() {
@@ -86,7 +87,7 @@ export default {
       this.locationName = address.city
     },
     // 进入页面自动定位
-    handleMapReady({BMap, map}) {
+    handleMapReady({ BMap, map }) {
       this.BMap = BMap
       this.map = map
       this.handleLocation()
@@ -94,35 +95,35 @@ export default {
     handleLocation() {
       this.locationName = '定位中...'
       let _this = this
-      var geolocation = new BMap.Geolocation()
-      geolocation.getCurrentPosition(function(r){
-      if(this.getStatus() == BMAP_STATUS_SUCCESS){
-        _this.locationSuccess({point: r.point, address: r.address})
-      }
-      else {
-        alert('failed'+this.getStatus());
-      }
-      },{enableHighAccuracy: true})
-    }
+      const geolocation = new BMap.Geolocation()
+      geolocation.getCurrentPosition(function(r) {
+        if (this.getStatus() === BMAP_STATUS_SUCCESS) {
+          _this.locationSuccess({ point: r.point, address: r.address })
+        } else {
+          alert('failed' + this.getStatus());
+        }
+      }, { enableHighAccuracy: true })
+    },
+    handleSaveAddress(title) {
+      this.changeAddress(title)
+      this.push('/home')
+    },
+    ...mapActions(['changeAddress'])
   }
 }
 </script>
 
-<style lang="stylus" scoped>
-.search
-  border-bottom 1px solid #eee
+<style lang="stylus" scoped>e
 .location-container
   display flex
   align-items center
-  .re-location
-    width 1rem
+  .van-button
+    width 1.2rem
     margin-right .1rem
-    // color #1989fa
+    color #2395ff !important
 .map-list
   width 100%
   height 2rem
-// .baidu-map
-//   height 2rem
 .address-list
   .item-group
     margin .1rem
