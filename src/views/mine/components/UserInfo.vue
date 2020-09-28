@@ -4,8 +4,8 @@
       <van-image
         round
         fit="cover"
-        width=".8rem"
-        height=".8rem"
+        width=".6rem"
+        height=".6rem"
         src="https://img.yzcdn.cn/vant/cat.jpeg"
       />
     </div>
