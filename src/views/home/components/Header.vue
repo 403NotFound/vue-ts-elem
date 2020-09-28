@@ -20,14 +20,14 @@ export default {
   },
   computed: {
     ...mapState(['locationAddress'])
-  },
-  mounted() {}
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/styles/varibles.styl'
 .header
-  height .5rem
+  height $headerHeight
   background-image: linear-gradient(#1cc2fc,#1fc2fd)
   .van-col
     display flex

@@ -113,7 +113,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>e
+<style lang="stylus" scoped>
 .location-container
   display flex
   align-items center
