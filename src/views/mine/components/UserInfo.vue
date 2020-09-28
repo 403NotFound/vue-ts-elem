@@ -57,7 +57,7 @@ export default {
   .info
     padding-left .1rem
     .name
-      font-size .22rem
+      font-size .19rem
     .sign
       font-size .12rem
       margin-top .05rem
