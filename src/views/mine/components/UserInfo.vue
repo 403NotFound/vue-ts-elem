@@ -57,8 +57,9 @@ export default {
   .info
     padding-left .1rem
     .name
-      font-size .24rem
+      font-size .22rem
     .sign
-      font-size .14rem
+      font-size .12rem
       margin-top .05rem
+      color #999
 </style>
