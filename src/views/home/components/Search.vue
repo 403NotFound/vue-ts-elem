@@ -41,6 +41,7 @@ export default {
 .search-container
   position sticky
   top 0
+  z-index 1
   // background $linearBgColor
   .search
     position relative

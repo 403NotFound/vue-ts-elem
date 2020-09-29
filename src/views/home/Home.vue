@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="home">
     <home-header />
     <home-search />
+    <home-swiper />
+    <home-float />
     <div class="scroll"></div>
   </div>
 </template>
@@ -9,6 +11,8 @@
 <script>
 import HomeHeader from './components/Header.vue'
 import HomeSearch from './components/Search.vue'
+import HomeSwiper from './components/Swiper.vue'
+import HomeFloat from './components/Float.vue'
 
 export default {
   name: 'Home',
@@ -18,7 +22,9 @@ export default {
   },
   components: {
     HomeHeader,
-    HomeSearch
+    HomeSearch,
+    HomeSwiper,
+    HomeFloat
   },
   methods: {
     handleSearchComplete(e) {
@@ -29,6 +35,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.scroll
-  height 10rem
+.home
+  background #f5f5f5
+  .scroll
+    height 10rem
 </style>
