@@ -36,7 +36,7 @@ export default {
 
 <style lang="stylus" scoped>
 .home
-  background #f5f5f5
+  background #fff
   .scroll
     height 10rem
 </style>
