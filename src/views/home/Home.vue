@@ -1,11 +1,14 @@
 <template>
   <div>
     <home-header />
+    <home-search />
+    <div class="scroll"></div>
   </div>
 </template>
 
 <script>
 import HomeHeader from './components/Header.vue'
+import HomeSearch from './components/Search.vue'
 
 export default {
   name: 'Home',
@@ -14,7 +17,8 @@ export default {
     }
   },
   components: {
-    HomeHeader
+    HomeHeader,
+    HomeSearch
   },
   methods: {
     handleSearchComplete(e) {
@@ -25,7 +29,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.map-list
-  width 100%
-  height 2rem
+.scroll
+  height 10rem
 </style>
