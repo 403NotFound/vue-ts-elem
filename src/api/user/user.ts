@@ -16,3 +16,11 @@ export const login = (userInfo: UserInfo) => {
     }
   })
 }
+
+// 获取用户详情接口
+export const userInfo = () => {
+  return $http({
+    url: '/userInfo',
+    method: 'get'
+  })
+}
