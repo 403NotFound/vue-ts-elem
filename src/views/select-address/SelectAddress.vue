@@ -74,6 +74,8 @@ export default {
           addressObj = {}
         })
         this.addressList = _arr
+      } else {
+        this.addressList = []
       }
     },
     handleManageClick() {
