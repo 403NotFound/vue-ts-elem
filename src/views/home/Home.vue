@@ -4,6 +4,7 @@
     <home-search />
     <home-swiper />
     <home-float />
+    <home-icons />
     <div class="scroll"></div>
   </div>
 </template>
@@ -13,6 +14,7 @@ import HomeHeader from './components/Header.vue'
 import HomeSearch from './components/Search.vue'
 import HomeSwiper from './components/Swiper.vue'
 import HomeFloat from './components/Float.vue'
+import HomeIcons from './components/Icons.vue'
 
 export default {
   name: 'Home',
@@ -24,7 +26,8 @@ export default {
     HomeHeader,
     HomeSearch,
     HomeSwiper,
-    HomeFloat
+    HomeFloat,
+    HomeIcons
   },
   methods: {
     handleSearchComplete(e) {
