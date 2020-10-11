@@ -14,6 +14,8 @@ import './plugins/index.ts'
 // baidu map
 import BaiduMap from 'vue-baidu-map'
 import { AK } from './utils/config'
+// iconfont
+import '@/assets/styles/iconfont.css'
 
 import { RouteParams } from '@/utils/interface'
 
