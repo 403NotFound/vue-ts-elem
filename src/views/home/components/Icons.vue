@@ -70,6 +70,7 @@ export default {
         message: name,
         icon: 'https://img.yzcdn.cn/vant/logo.png',
       });
+      this.push(`/food/${name}`)
     }
   },
   mounted() {
