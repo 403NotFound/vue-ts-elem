@@ -1,16 +1,25 @@
 <template>
   <div class="food">
     {{ $route.params.foodId }}
+    <food-header @click.native="handleClick"/>
   </div>
 </template>
 
 <script>
-// import HomeHeader from './components/Header.vue'
+import FoodHeader from './components/Header.vue'
 
 export default {
   name: 'Food',
+  components: {
+    FoodHeader
+  },
   data() {
     return {
+    }
+  },
+  methods: {
+    handleClick() {
+      console.log(1234);
     }
   },
   mounted() {
