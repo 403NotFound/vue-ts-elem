@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const tsImportPluginFactory = require('ts-import-plugin');
 module.exports = {
   // 部署应用包时的 baseURL,用法和 webpack 本身的 output.publicPath 一致
-  publicPath: './',
+  publicPath: '/',
   // 输出文件目录
   outputDir: 'dist',
   // eslint-loader 是否在保存的时候检查
