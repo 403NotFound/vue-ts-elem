@@ -74,6 +74,8 @@ export default {
           addressObj = {}
         })
         this.addressList = _arr
+      } else {
+        this.addressList = []
       }
     },
     handleManageClick() {
@@ -113,7 +115,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>e
+<style lang="stylus" scoped>
 .location-container
   display flex
   align-items center

@@ -1,37 +1,35 @@
 <template>
   <div>
-    <div class="mine-top-login">
-      <div class="icon">图标</div>
-
-      <div class="top-login">
-        <div class="login-text">登录/注册</div>
-        <div class="login-privilege">登录后享受更多特权</div>
-      </div>
-
-      <div>></div>
-    </div>
+    <mine-header :opacityStyle='opacityStyle'/>
+    <mine-user @changeOpacity='changeOpacity'/>
+    <div class="scroll"></div>
   </div>
 </template>
 
 <script>
+import MineHeader from './components/Header'
+import MineUser from './components/UserInfo'
 
 export default {
   name: 'Mine',
+  components: {
+    MineHeader,
+    MineUser
+  },
+  data() {
+    return {
+      opacityStyle: {}
+    }
+  },
+  methods: {
+    changeOpacity(opacityStyle) {
+      this.opacityStyle = opacityStyle
+    }
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .mine-top-login
-    background-color deepskyblue
-    height 1.2rem
-    display flex
-    justify-content space-around
-  
-  .icon
-    width 0.5rem
-    height 0.5rem
-    border-radius 100%
-
-  .login-privilege
-    font-size 15px
+.scroll
+  height 10rem
 </style>

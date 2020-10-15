@@ -14,7 +14,10 @@ import {
   Cell,
   CellGroup,
   Col,
-  Row
+  Row,
+  Swipe,
+  SwipeItem,
+  Toast
 } from 'vant';
 
 Vue.use(Button);
@@ -31,3 +34,6 @@ Vue.use(Cell);
 Vue.use(CellGroup);
 Vue.use(Col);
 Vue.use(Row);
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+Vue.use(Toast);
