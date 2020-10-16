@@ -75,15 +75,15 @@ module.exports = {
     https: false,
     hotOnly: false,
     // http 代理配置
-    // proxy: {
-      // '/api': {
-      //   target: 'http://127.0.0.1:3000/api',
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     '^/api': ''
-      //   }
-      // }
-    // },
+    proxy: {
+      '/api': {
+        target: 'http://106.54.130.83:7001',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
     before: (app) => {}
   },
   // 第三方插件配置

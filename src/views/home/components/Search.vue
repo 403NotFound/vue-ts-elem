@@ -31,7 +31,7 @@ export default {
   },
   async mounted() {
     const res = await recommendTag()
-    this.tagList = res.data.tags
+    this.tagList = res.data[0].tags
   }
 }
 </script>
