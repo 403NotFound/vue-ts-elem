@@ -29,11 +29,6 @@ const routes: RouteConfig[] = [
         path: '/mine',
         name: 'Mine',
         component: () => import('@/views/mine/Mine.vue')
-      },
-      {
-        path: '/food/:foodId',
-        name: 'Food',
-        component: () => import('@/views/food/Food.vue')
       }
     ]
   },
@@ -41,6 +36,11 @@ const routes: RouteConfig[] = [
     path: '/selectAddress',
     name: 'SeleclAddress',
     component: () => import('@/views/select-address/SelectAddress.vue')
+  },
+  {
+    path: '/food/:foodId',
+    name: 'Food',
+    component: () => import('@/views/food/Food.vue')
   }
 ];
 
