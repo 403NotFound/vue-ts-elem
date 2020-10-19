@@ -35,6 +35,7 @@
 <script>
 import NavBar from '@/components/NavBar'
 import { login } from '@/api/user/user'
+import { Toast } from 'vant'
 
 export default {
   name: 'Order',
@@ -58,14 +59,21 @@ export default {
         username: this.username,
         password: this.password
       }
-      const res = await login(user)
-      const data = res.data
-      if (data.token && res.status === 200) {
+      try {
+        const res = await login(user)
+        const data = res.data
+        if (data.token && res.status === 200) {
+          this.isLoding = false
+          const token = data.token
+          // 登陆成功获得 token 并存入 localStorage
+          this.handleSaveTooken(token)
+          this.$router.push('/mine')
+        }
+      } catch (err) {
         this.isLoding = false
-        const token = data.token
-        // 登陆成功获得 token 并存入 localStorage
-        this.handleSaveTooken(token)
-        this.$router.push('/mine')
+        if (err.response.status === 401) {
+          Toast.fail(err.response.data.message);
+        }
       }
     },
     handleSaveTooken(token) {
