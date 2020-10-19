@@ -8,7 +8,7 @@ interface UserInfo {
 export const login = (userInfo: UserInfo) => {
   const { password, username } = userInfo
   return $http({
-    url: '/login',
+    url: '/users/login',
     method: 'post',
     data: {
       password,
@@ -20,7 +20,7 @@ export const login = (userInfo: UserInfo) => {
 // 获取用户详情接口
 export const userInfo = () => {
   return $http({
-    url: '/userInfo',
+    url: '/users/userInfo',
     method: 'get'
   })
 }
